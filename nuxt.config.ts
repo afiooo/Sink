@@ -64,6 +64,13 @@ export default defineNuxtConfig({
   },
 
   nitro: {
+    // --- VVVVVV 这里是添加的修复代码 VVVVVV ---
+    cloudflare: {
+      compatibilityDate: '2024-04-03', // 使用你构建日志中建议的日期
+      compatibilityFlags: ['nodejs_compat'], // 启用 Node.js 兼容性
+    },
+    // --- ^^^^^^ 这里是添加的修复代码 ^^^^^^ ---
+
     experimental: {
       openAPI: true,
     },
